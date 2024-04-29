@@ -258,6 +258,10 @@ public class Graph {
         System.out.print("Adjacent Vertecies: ");
         
         int index = getVertexIndex(label);
+        if (index == -1) { // error check
+            System.out.println("Letter could not be found!");
+            return;
+        }
         vertexList[index].wasVisited = true; // mark it
         theStack.push(index); // push it
         // no need to display the fist vertex, we just want the adjancents
@@ -289,6 +293,10 @@ public class Graph {
         System.out.print("Vertecies Two Edges away: ");
         
         int index = getVertexIndex(label);
+        if (index == -1) { // error check
+            System.out.println("Letter could not be found!");
+            return;
+        }
         vertexList[index].wasVisited = true; // mark it
         theStack.push(index); // push it
         int edgeCounter = 0; // edge counter.
