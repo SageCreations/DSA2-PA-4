@@ -1,6 +1,19 @@
+// Base code from the book: Data Structures & Algorithms in JAVA
+
 // mst.java
 // demonstrates minimum spanning tree
 // to run this program: C>java MSTApp
+
+
+// Edited by Edward Cruz, 
+// Most edits or functions made by me can be found using ctrl-f then search "PA4"
+// functions should be labled with thier corresponding Option, sorry if I forgot to label any in advance
+
+// I used this line to compile (windows): javac .\Main.java .\Graph.java .\Tree.java .\Vertex.java .\Node.java
+// Run: java Main
+// StackX wasnt used anywhere else so I left it in this file, should create a .class with compilation of Graph.java
+
+
 //////////////////////////////////////////////////////////////
 
 class StackX {
@@ -205,6 +218,7 @@ public class Graph {
 
     // Programming Assignment 4 - PA4
 
+    // Option 2 - PA4
     public void displayVertexList() {
         for (int i = 0; i < nVerts; i++) {
             displayVertex(i); 
@@ -213,6 +227,7 @@ public class Graph {
         System.out.println("");
     }
 
+    // Option 3 - PA4
     public void displayAdjMatrix() {
         System.out.print("  ");
         displayVertexList(); // header row 
@@ -278,7 +293,7 @@ public class Graph {
         theStack.push(index); // push it
         int edgeCounter = 0; // edge counter.
         
-        boolean criteriaMet = false;        
+        boolean criteriaMet = false; // flag for message if neccsary   
         while (!theStack.isEmpty()) { // until stack empty,
             // get an unvisited vertex adjacent to stack top
             int v = getAdjUnvisitedVertex(theStack.peek());

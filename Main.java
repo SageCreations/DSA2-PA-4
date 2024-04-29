@@ -39,35 +39,34 @@ public class Main {
 
     // execute the choices that were listed in DisplayOptions()
     public static void ExecuteOption(Tree tree, Graph graph, int option) {
-		
 		switch(option) {
-			case 1:
+			case 1: // option 1
 				tree.displayTree(); // ONLY TIME TREE CAN BE USED
 				break;
-			case 2:
+			case 2: // option 2
 			    System.out.println("\nVertex List:");	
                 graph.displayVertexList();
 				break;
-			case 3:
+			case 3: // option 3
                 System.out.println("\nAdjacency Matrix:");
 				graph.displayAdjMatrix();
 				break;
-			case 4:
+			case 4: // option 4
                 System.out.print("Enter the letter: ");
                 graph.myDFS(getChar());
 				break;
-			case 5:
+			case 5: // option 5
                 System.out.print("Enter the letter: ");
                 graph.getAdjacentVertecies(getChar());
 				break;
-			case 6:
+			case 6: // option 6
                 System.out.print("Enter the letter: ");
                 graph.getVerteciesTwoEdgesAway(getChar());
 				break;
-			case 7:
+			case 7: // option 7
 				System.out.println("\nExiting...\n\n");
 				break;
-			default:
+			default: // not an option
 				System.out.println("Invalid entry");
 		}
 	}
@@ -108,11 +107,11 @@ public class Main {
         // Main Program loop
         int value = 0;
 		do {
-			DisplayOptions();
-			System.out.print("\nPlease pick a number corresponding to the options above: ");
-			value = scan.nextInt();
-			scan.nextLine();
-			ExecuteOption(myTree, myGraph, value);
+			DisplayOptions(); // options for the user
+			System.out.print("\nPlease pick a number corresponding to the options above: "); // prompt
+			value = scan.nextInt(); //user selection
+			scan.nextLine(); // so my program doesnt hang
+			ExecuteOption(myTree, myGraph, value); // The spinal cord of the program
 		} while (value != 7);
 
 
